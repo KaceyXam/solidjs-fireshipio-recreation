@@ -1,0 +1,26 @@
+.homeLink {
+  display: block;
+  width: 3rem;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.homeLink * {
+  position: absolute;
+}
+
+.homeLink :first-child {
+  display: block;
+}
+
+.homeLink :last-child {
+  display: none;
+}
+
+.homeLink:hover :first-child {
+  display: none;
+}
+
+.homeLink:hover :last-child {
+  display: block;
+}
