@@ -4,31 +4,35 @@ import styles from "./Header.module.css";
 
 const Header: Component = () => {
   return (
-    <header class={styles.header}>
+    <nav class={styles.header}>
       <a href="#" class={styles.homeLink}>
         <img src="/images/fireship.svg" />
         <img src="/images/fire.gif" />
       </a>
-      <ul>
-        <li>
+      <ul class={styles.navList}>
+        <li class={styles.pro}>
           <a href="#">Pro</a>
         </li>
-        <li>
-          <a href="#">Labs</a>
+        <li class={styles.labs}>
+          <a href="#">labs</a>
+        </li>
+        <li class={styles.courses}>
+          <a href="#">courses</a>
         </li>
         <li>
-          <a href="#">Courses</a>
+          <button class={styles.search}>
+            <span>?</span>
+            <span class={styles.searchTitle}>Search</span>
+            <span class={styles.shortcut}>/</span>
+          </button>
         </li>
         <li>
-          <input type="text" placeholder="Search" />
-        </li>
-        <li>
-          <button>
+          <button class={styles.login}>
             Login
           </button>
         </li>
       </ul>
-    </header>
+    </nav>
   );
 }
 
