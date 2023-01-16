@@ -10,13 +10,13 @@ const Header: Component = () => {
         <img src="/images/fire.gif" />
       </a>
       <ul class={styles.navList}>
-        <li class={styles.pro}>
+        <li class={`${styles.pro} ${styles.grow}`}>
           <a href="#">Pro</a>
         </li>
-        <li class={styles.labs}>
+        <li class={`${styles.lab} ${styles.grow}`}>
           <a href="#">labs</a>
         </li>
-        <li class={styles.courses}>
+        <li class={`${styles.courses} ${styles.grow}`}>
           <a href="#">courses</a>
         </li>
         <li>

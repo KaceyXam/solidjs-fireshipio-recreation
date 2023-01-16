@@ -52,3 +52,15 @@ body {
   border-radius: 100vmax;
   background: rgb(178 190 205 / .6);
 }
+
+.modal {
+  background: hsl(0, 0, 20);
+  border: white solid 2px;
+  border-radius: .25em;
+  padding: 1em;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50%;
+}
