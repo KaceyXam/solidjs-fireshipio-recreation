@@ -14,7 +14,7 @@ const App: Component = () => {
     <>
       <Header />
       <button onClick={() => setShowModal(!showModal())}>toggle modal</button>
-      <Modal show={showModal()} toggleFunc={() => setShowModal(!showModal())}>
+      <Modal show={showModal()} toggleFunc={() => setShowModal(false)}>
         <h3>Hello World</h3>
         <p>This is a paragraph inside a modal</p>
       </Modal>
