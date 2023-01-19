@@ -1,11 +1,8 @@
-import { Component, onMount, Show, createSignal } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import clickOutside from "./clickOutside";
-import styles from './App.module.css';
-import Modal from "./components/Modal"
-
-const clickFunc = clickOutside;
+import Modal from "./components/Modal";
+import Body from "./sections/Body";
 
 const App: Component = () => {
   const [showModal, setShowModal] = createSignal(false);
@@ -18,8 +15,7 @@ const App: Component = () => {
         <h3>Hello World</h3>
         <p>This is a paragraph inside a modal</p>
       </Modal>
-      
-      <div class="scrolling">Hello World</div>
+      <Body />      
       <Footer />
     </>
   );
