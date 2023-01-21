@@ -5,15 +5,19 @@ import Modal from "./components/Modal";
 import Body from "./sections/Body";
 
 const App: Component = () => {
-  const [showModal, setShowModal] = createSignal(false);
+  const [searchModal, setSearchModal] = createSignal(false);
+  const [loginModal, setLoginModal] = createSignal(false);
 
   return (
     <>
-      <Header />
-      <button onClick={() => setShowModal(!showModal())}>toggle modal</button>
-      <Modal show={showModal()} toggleFunc={() => setShowModal(false)}>
-        <h3>Hello World</h3>
-        <p>This is a paragraph inside a modal</p>
+      <Header search={() => setSearchModal(true)} login={() => setLoginModal(true)} />
+      <Modal show={searchModal()} toggleFunc={() => setSearchModal(false)}>
+        <h3>Search</h3>
+        <p>This is where you would search on Fireship.io, but I am not implementing that because that is out of the scope of this project</p>
+      </Modal>
+      <Modal show={loginModal()} toggleFunc={() => setLoginModal(false)}>
+        <h3>Login</h3>
+        <p>This is where you would login. Someday, I want to implement this, but not right now, so I will leave it blank.</p>
       </Modal>
       <Body />      
       <Footer />

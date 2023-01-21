@@ -2,7 +2,12 @@ import { Component } from "solid-js"
 
 import styles from "./Header.module.css";
 
-const Header: Component = () => {
+interface ModalProps {
+  search: () => void,
+  login: () => void
+}
+
+const Header: Component<ModalProps> = (props) => {
   return (
     <nav class={styles.header}>
       <a href="#" class={styles.homeLink}>
@@ -20,14 +25,14 @@ const Header: Component = () => {
           <a href="#">courses</a>
         </li>
         <li>
-          <button class={styles.search}>
+          <button class={styles.search} onClick={props.search}>
             <span>?</span>
             <span class={styles.searchTitle}>Search</span>
             <span class={styles.shortcut}>/</span>
           </button>
         </li>
         <li>
-          <button class={styles.login}>
+          <button class={styles.login} onClick={props.login}>
             Login
           </button>
         </li>
