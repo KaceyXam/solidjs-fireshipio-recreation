@@ -3,6 +3,10 @@
 	margin-inline: auto;
 }
 
+:where(p, a, h2) {
+	color: rgb(178 190 205 / 1);
+}
+
 .heroSection {
 	display: flex;
 	justify-content: space-between;
@@ -15,6 +19,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.videoDiv iframe {
+	width: 400px;
+	aspect-ratio: 16/9;
+	border: none;
 }
 
 .title {
@@ -52,3 +62,105 @@
 .title a:hover {
 	--tw-bg-opacity: .7;
 }
+
+.hardTruth {
+	display: grid;
+	place-content: center;
+	text-align: center;
+	min-height: 40rem;
+	font-size: 3rem;
+	gap: 1em;
+}
+
+.hardTruth h2 {
+	padding: .25em .5em;
+	background: rgb(239 68 68 / 1);
+	color: #222;
+}
+
+.hardTruth a {
+	animation: bounce infinite 1s ease-in;
+}
+
+:where(.bodySection) {
+	--bold-color: rgb(239 68 68);
+}
+
+.bodySection {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+}
+
+.bodySection :where(p) {
+	text-align: center;
+	max-width: 45ch;
+	font-size: 1.5em;
+	opacity: .7;
+}
+
+.bodySection h2 {
+	font-size: 3rem;
+	padding: .25em .5em;
+	background: var(--bold-color);
+	color: hsl(0, 0%, 10%);
+	margin-bottom: 2em;
+}
+
+.cantLearn {
+	font-size: 3rem;
+}
+
+.boldText {
+	font-family: "Paytone One", sans-serif;
+	text-transform: uppercase;
+	color: var(--bold-color);
+	animation: pulse 1.5s infinite ease-in-out;
+}
+
+.bodySection a {
+	text-decoration: none;
+	color: inherit;
+	animation: bounce infinite 1s ease-out;
+}
+
+.loginBtn {
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: inherit;
+	opacity: .7;
+	animation: bounce 1s ease-in-out infinite;
+}
+
+
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: .7;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@keyframes bounce {
+	0% {
+		translate: 0 -20%;
+	}
+	
+	45% {
+		translate: 0 20%;
+	}
+	
+	100% {
+		translate: 0 -20%;
+	}
+}
+

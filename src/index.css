@@ -3,6 +3,7 @@
 :root {
   font-family: "Poppins", sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 /* css reset */
@@ -63,4 +64,20 @@ body {
   top: 50%;
   left: 50%;
   translate: -50%;
+}
+
+.show {
+  animation: fade-in 500ms ease-in forewards;
+}
+
+@keyframes fade-in {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
